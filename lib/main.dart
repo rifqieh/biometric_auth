@@ -66,6 +66,8 @@ class _HomePageState extends State<HomePage> {
               onPressed: () async {
                 final bool result = await localAuth.authenticate(
                   localizedReason: 'Untuk menampilkan pesan rahasia',
+                  // kalo mau pake biometric aja (fingerprint / face id)
+                  biometricOnly: true,
                 );
 
                 setState(() {
